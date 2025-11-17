@@ -31642,7 +31642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc47b04ca281444996cb44be32ee813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpCheck: {fileID: 0}
+  jumpCheck: {fileID: 1285184749}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

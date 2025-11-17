@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    private bool jumpIsPressed = false;
+    bool jumpIsPressed = false;
     public Transform jumpCheck;
 
     void Start()
@@ -28,7 +28,7 @@ public class NewBehaviourScript : MonoBehaviour
             transform.localScale = newScale;
         }
 
-        if (jumpIsPressed && Physics2D.OverlapCircle(jumpCheck.position, 0.1f, LayerMask.GetMask("Ground")));
+        if (jumpIsPressed && Physics2D.OverlapCircle(jumpCheck.position, 0.1f, LayerMask.GetMask("Ground")))
         {
             rb.AddForce(new Vector2(0f, 500f));
             jumpIsPressed = false;
