@@ -8,6 +8,7 @@ public class NewBehaviourScript : MonoBehaviour
     private Animator anim;
     bool jumpIsPressed = false;
     public Transform jumpCheck;
+    public Vector2 jumpForce = new Vector2(0f, 500f);
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         if (jumpIsPressed && Physics2D.OverlapCircle(jumpCheck.position, 0.1f, LayerMask.GetMask("Ground")))
         {
-            rb.AddForce(new Vector2(0f, 500f));
+            rb.AddForce(jumpForce);
             jumpIsPressed = false;
         }
     }
